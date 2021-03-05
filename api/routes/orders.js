@@ -9,8 +9,13 @@ routes.get("/", (req, res, next) => {
 })
 
 routes.post("/", (req, res, next) => {
+    order = {
+        productid: req.body.productid,
+        quantity : req.body.quantity
+    }
     res.status(200).json({
-        messsag: "Handlling POST requests to orders !"
+        messsag: "Handlling POST requests to orders !",
+        order:order 
     })
 })
 
